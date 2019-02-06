@@ -12,6 +12,8 @@ public:
     std::vector<Creature*> herbivores = std::vector<Creature*>();
     std::vector<Creature*> carnivores = std::vector<Creature*>();
 
+    ~Cell() = default;
+
     bool remove(Creature*);
 };
 
