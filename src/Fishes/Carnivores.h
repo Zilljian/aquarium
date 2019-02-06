@@ -3,18 +3,21 @@
 
 #include "Creature.h"
 #include "Field.h"
-
+#include <random>
 
 class Carnivores : public Creature {
 public:
     Carnivores(int,int,Field*);
     bool stepForward() override;
-    void move() override;
     Creature* breedDescendant() override;
+    void move() override;
     ~Carnivores() = default;
 
 private:
-    Field *field;
+    Creature* getClosest();
+    Creature* checkField(int,int);
+    void eat();
+    Field* field;
 };
 
 
