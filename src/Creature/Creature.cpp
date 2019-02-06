@@ -30,3 +30,11 @@ int Creature::getX() {
 int Creature::getY() {
     return yPos;
 }
+
+bool Creature::isHungerDeath() {
+    return hunger >= MAX_HUNGER;
+}
+
+void Creature::setHunger(int newHunger) {
+    hunger = newHunger;
+}

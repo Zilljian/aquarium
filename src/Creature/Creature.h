@@ -14,10 +14,13 @@ public:
     void setDead();
     int getX();
     int getY();
+    bool isHungerDeath();
+    void setHunger(int);
 
     virtual Creature* breedDescendant() = 0;
     virtual void move() = 0;
     virtual bool stepForward() = 0;
+    ~Creature() = default;
 
 protected:
     bool aliveParam = true;
